@@ -21,7 +21,6 @@
 		{
 			for ($i=2; $i < count($arrUrl); $i++) {
 				$params .=  $arrUrl[$i].',';
-				# code...
 			}
 			$params = trim($params,',');
 		}
