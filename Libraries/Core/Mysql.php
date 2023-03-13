@@ -12,7 +12,6 @@
 			$this->conexion = $this->conexion->conect();
 		}
 
-		//Insertar un registro
 		public function insert(string $query, array $arrValues)
 		{
 			$this->strquery = $query;
@@ -27,7 +26,7 @@
 	        }
 	        return $lastInsert; 
 		}
-		//Busca un registro
+
 		public function select(string $query)
 		{
 			$this->strquery = $query;
@@ -36,7 +35,7 @@
         	$data = $result->fetch(PDO::FETCH_ASSOC);
         	return $data;
 		}
-		//Devuelve todos los registros
+
 		public function select_all(string $query)
 		{
 			$this->strquery = $query;
@@ -45,7 +44,7 @@
         	$data = $result->fetchall(PDO::FETCH_ASSOC);
         	return $data;
 		}
-		//Actualiza registros
+
 		public function update(string $query, array $arrValues)
 		{
 			$this->strquery = $query;
@@ -54,7 +53,7 @@
 			$resExecute = $update->execute($this->arrVAlues);
 	        return $resExecute;
 		}
-		//Eliminar un registros
+
 		public function delete(string $query)
 		{
 			$this->strquery = $query;
