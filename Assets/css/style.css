@@ -3,6 +3,7 @@
   background: gray;
   padding: 6px;
 }
+
 .app-sidebar__toggle{
 display: -webkit-flex;
 display: -moz-flex;
@@ -13,10 +14,21 @@ justify-content: center;
 align-items: center;
 font-size: 15pt;
 }
+
 .app-sidebar__toggle::before{
 display: none;
 }
+
 .headerRegister, .header-primary{
 background: #009688;
 color: #FFF;
+}
+
+.headerUpdate{
+	background: #007bff;
+	color: #FFF;
+}
+
+.notBlock{
+	display: none;
 }
