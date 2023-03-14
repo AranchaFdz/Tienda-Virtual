@@ -77,5 +77,12 @@
 			}
 			die();
 		}
+		public function confirmUser(string $params){
+			$data['page_tag'] = "Cambiar contraseña";
+			$data['page_title'] = "Cambiar contraseña";
+			$data['page_name'] = "cambiar_contraseña";
+			$data['idpersona'] = 1;
+			$this->views->getView($this,"cambiar_password",$data);
+		}
 	}
 ?>
