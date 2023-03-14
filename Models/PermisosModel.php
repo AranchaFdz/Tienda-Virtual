@@ -45,9 +45,26 @@
 			$this->u = $u;
 			$this->d = $d;
 			$query_insert  = "INSERT INTO permisos(rolid,moduloid,r,w,u,d) VALUES(?,?,?,?,?,?)";
-        	$arrData = array($this->intRolid, $this->intModuloid, $this->r, $this->w, $this->u, $this->d);
-        	$request_insert = $this->insert($query_insert,$arrData);		
-	        return $request_insert;
+			$arrData = array($this->intRolid, $this->intModuloid, $this->r, $this->w, $this->u, $this->d);
+			$request_insert = $this->insert($query_insert,$arrData);		
+		  return $request_insert;
+		}
+		public function permisosModulo(int $idrol){
+			$this->intRolid = $idrol;
+			$sql = "SELECT p.rolid,
+										 p.moduloid,
+										 m.titulo as modulo,
+										 p.r,
+										 p.w,
+										 p.u,
+										 p.d
+							FROM permisos p INNER JOIN modulo m ON p.moduloid = m.idmodulo WHERE p.rolid = $this->intRolid";
+			$request = $this->select_all($sql);
+			dep($request);
+			for ($i=0; $i < count($request); $i++) {
+				$arrPermisos[$request[$i]['moduloid']] = $request[$i];
+			}
+			return $arrPermisos;
 		}
 	}
  ?>

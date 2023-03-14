@@ -7,7 +7,7 @@
     <meta name="author" content="Arancha Fernández">
     <meta name="theme-color" content="#009688">
     <link rel="shortcut icon" href="<?= media();?>/images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="<?= media();?>/css/main.css">
+    <link rel="stylesheet" type="text/css" href="<?= media(); ?>/css/main.css">
     <link rel="stylesheet" type="text/css" href="<?= media(); ?>/css/style.css">
     <title><?= $data['page_tag'] ?></title>
   </head>
@@ -20,6 +20,11 @@
         <h1><?= $data['page_title'] ?></h1>
       </div>
       <div class="login-box">
+        <div id="divLoading" >
+          <div>
+            <img src="<?= media(); ?>/images/loading.svg" alt="Loading">
+          </div>
+        </div>
         <form class="login-form" name="formLogin" id="formLogin" action="">
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>INICIAR SESIÓN</h3>
           <div class="form-group">

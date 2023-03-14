@@ -20,9 +20,15 @@
         <h1><?= $data['page_title'] ?></h1>
       </div>
       <div class="login-box flipped">
-        
+        <div id="divLoading" >
+          <div>
+            <img src="<?= media(); ?>/images/loading.svg" alt="Loading">
+          </div>
+        </div>
         <form id="formCambiarPass" name="formCambiarPass"class="forget-form" action="">
           <input type="hidden" id="idUsuario" name="idUsuario" value="<?= $data['idpersona']; ?>" required >
+          <input type="hidden" id="txtEmail" name="txtEmail" value="<?= $data['email']; ?>" required >
+          <input type="hidden" id="txtToken" name="txtToken" value="<?= $data['token']; ?>" required >
           <h5 class="login-head"><i class="fas fa-key"></i> Cambiar Contraseña</h5>
           <div class="form-group">
             <input id="txtPassword" name="txtPassword" class="form-control" type="password" placeholder="Nueva contraseña" required >
