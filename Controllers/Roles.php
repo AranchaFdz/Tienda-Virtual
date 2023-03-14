@@ -3,13 +3,18 @@
 	class Roles extends Controllers{
 		public function __construct()
 		{
+			session_start();
+			if(empty($_SESSION['login']))
+			{
+				header('Location: '.base_url().'/login');
+			}
 			parent::__construct();
 		}
 
 		public function Roles()
 		{
 			$data['page_id'] = 3;
-			$data['page_tag'] = "Roles Usuario";
+			$data['page_tag'] = "Roles";
 			$data['page_name'] = "rol_usuario";
 			$data['page_title'] = "Roles Usuario";
 			$data['page_functions_js'] = "functions_roles.js";
