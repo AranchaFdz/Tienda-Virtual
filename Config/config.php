@@ -1,5 +1,4 @@
 <?php 
-
 	const BASE_URL = "http://localhost/tienda-virtual";
 
 	date_default_timezone_set('Europa/Spain');
@@ -15,7 +14,9 @@
 
 	const SMONEY = "€";
 
-	
-
+	const NOMBRE_REMITENTE = "Tienda Virtual ZUZU";
+	const EMAIL_REMITENTE = "no-reply@empresa.com";
+	const NOMBRE_EMPESA = "Tienda Virtual ZUZU";
+	const WEB_EMPRESA = "Página Web empresa";
 
 ?>
