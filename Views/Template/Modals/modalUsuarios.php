@@ -1,4 +1,3 @@
-<!-- Modal -->
 <div class="modal fade" id="modalFormUsuario" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" >
     <div class="modal-content">
@@ -52,13 +51,13 @@
                         <option value="2">Inactivo</option>
                     </select>
                 </div>
-             </div>
-             <div class="form-row">
+              </div>
+              <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="txtPassword">Password</label>
                   <input type="password" class="form-control" id="txtPassword" name="txtPassword" >
                 </div>
-             </div>
+              </div>
               <div class="tile-footer">
                 <button id="btnActionForm" class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i><span id="btnText">Guardar</span></button>&nbsp;&nbsp;&nbsp;
                 <button class="btn btn-danger" type="button" data-dismiss="modal"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cerrar</button>
@@ -69,7 +68,6 @@
   </div>
 </div>
 
-<!-- Modal -->
 <div class="modal fade" id="modalViewUser" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" >
     <div class="modal-content">
@@ -123,4 +121,3 @@
     </div>
   </div>
 </div>
-

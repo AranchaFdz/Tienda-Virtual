@@ -1,13 +1,12 @@
-    <!-- Sidebar menu-->
-    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
-      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="<?= media();?>/images/foto mia.jpeg" alt="User Image">
+    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="<?= media();?>/images/foto mia.jpeg" alt="User Image">
         <div>
-          <p class="app-sidebar__user-name"><?= $_SESSION['userData']['nombres'] ?></p>
-          <p class="app-sidebar__user-designation"><?= $_SESSION['userData']['nombrerol'] ?></p>
+            <p class="app-sidebar__user-name"><?= $_SESSION['userData']['nombres']; ?></p>
+            <p class="app-sidebar__user-designation"><?= $_SESSION['userData']['nombrerol']; ?></p>
         </div>
-      </div>
-      <ul class="app-menu">
+    </div>
+    <ul class="app-menu">
         <?php if(!empty($_SESSION['permisos'][1]['r'])){ ?>
         <li>
             <a class="app-menu__item" href="<?= base_url(); ?>/dashboard">
@@ -49,7 +48,7 @@
                 <li><a class="treeview-item" href="<?= base_url(); ?>/productos"><i class="icon fa fa-circle-o"></i> Productos</a></li>
                 <?php } ?>
                 <?php if(!empty($_SESSION['permisos'][6]['r'])){ ?>
-                <li><a class="treeview-item" href="<?= base_url(); ?>/categorias"><i class="icon fa fa-circle-o"></i> Categotías</a></li>
+                <li><a class="treeview-item" href="<?= base_url(); ?>/categorias"><i class="icon fa fa-circle-o"></i> Categorías</a></li>
                 <?php } ?>
             </ul>
         </li>
@@ -68,5 +67,5 @@
                 <span class="app-menu__label">Logout</span>
             </a>
         </li>
-      </ul>
-    </aside>
+    </ul>
+</aside>

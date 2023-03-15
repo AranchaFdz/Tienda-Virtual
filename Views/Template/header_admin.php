@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Tienda Virtual">
@@ -15,13 +15,18 @@
     <link rel="stylesheet" type="text/css" href="<?= media(); ?>/css/style.css">
   </head>
   <body class="app sidebar-mini">
+  <div id="divLoading" >
+      <div>
+        <img src="<?= media(); ?>/images/loading.svg" alt="Loading">
+      </div>
+    </div>
     <header class="app-header"><a class="app-header__logo" href="<?= base_url(); ?>/dashboard">Z U Z U</a>
       <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"><i class="fas fa-bars"></i></a>
       <ul class="app-nav">
         <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
           <ul class="dropdown-menu settings-menu dropdown-menu-right">
             <li><a class="dropdown-item" href="<?= base_url(); ?>/opciones"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
-            <li><a class="dropdown-item" href="<?= base_url(); ?>/perfil"><i class="fa fa-user fa-lg"></i> Profile</a></li>
+            <li><a class="dropdown-item" href="<?= base_url(); ?>/usuarios/perfil"><i class="fa fa-user fa-lg"></i> Profile</a></li>
             <li><a class="dropdown-item" href="<?= base_url(); ?>/logout"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
           </ul>
         </li>

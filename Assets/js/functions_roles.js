@@ -1,6 +1,5 @@
-
 var tableRoles;
-
+var divLoading = document.querySelector("#divLoading");
 document.addEventListener('DOMContentLoaded', function(){
 
 	tableRoles = $('#tableRoles').dataTable( {
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function(){
         "order":[[0,"desc"]]  
     });
 
-    //NUEVO ROL
     var formRol = document.querySelector("#formRol");
     formRol.onsubmit = function(e) {
         e.preventDefault();
@@ -40,13 +38,14 @@ document.addEventListener('DOMContentLoaded', function(){
             swal("Atención", "Todos los campos son obligatorios." , "error");
             return false;
         }
+        divLoading.style.display = "flex";
         var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
         var ajaxUrl = base_url+'/Roles/setRol'; 
         var formData = new FormData(formRol);
         request.open("POST",ajaxUrl,true);
         request.send(formData);
         request.onreadystatechange = function(){
-           if(request.readyState == 4 && request.status == 200){
+            if(request.readyState == 4 && request.status == 200){
                 
                 var objData = JSON.parse(request.responseText);
                 if(objData.status)
@@ -59,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function(){
                     swal("Error", objData.msg , "error");
                 }              
             } 
+            divLoading.style.display = "none";
+            return false;
         }
 
         
@@ -80,9 +81,6 @@ function openModal(){
 }
 
 window.addEventListener('load', function() {
-    /*fntEditRol();
-    fntDelRol();
-    fntPermisos();*/
 }, false);
 
 function fntEditRol(idrol){

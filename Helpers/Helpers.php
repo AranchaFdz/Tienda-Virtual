@@ -40,6 +40,7 @@
         $emailDestino = $data['email'];
         $empresa = NOMBRE_REMITENTE;
         $remitente = EMAIL_REMITENTE;
+
         $de = "MIME-Version: 1.0\r\n";
         $de .= "Content-type: text/html; charset=UTF-8\r\n";
         $de .= "From: {$empresa} <{$remitente}>\r\n";
@@ -56,14 +57,22 @@
         $idrol = $_SESSION['userData']['idrol'];
         $arrPermisos = $objPermisos->permisosModulo($idrol);
         $permisos = '';
-        $permisosMod =  '';
+        $permisosMod = '';
         if(count($arrPermisos) > 0 ){
             $permisos = $arrPermisos;
             $permisosMod = isset($arrPermisos[$idmodulo]) ? $arrPermisos[$idmodulo] : "";
-        }  
+        }
         $_SESSION['permisos'] = $permisos;
         $_SESSION['permisosMod'] = $permisosMod;
     }
+
+    function sessionUser(int $idpersona){
+        require_once ("Models/LoginModel.php");
+        $objLogin = new LoginModel();
+        $request = $objLogin->sessionLogin($idpersona);
+        return $request;
+    }
+
 
     function strClean($strCadena){
         $string = preg_replace(['/\s+/','/^\s|\s$/'],[' ',''], $strCadena);
@@ -128,5 +137,4 @@
         return $cantidad;
     }
     
-
- ?>
+?>
