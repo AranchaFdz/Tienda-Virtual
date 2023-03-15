@@ -12,7 +12,6 @@
 			$this->conexion = $this->conexion->conect();
 		}
 
-
 		public function insert(string $query, array $arrValues)
 		{
 			$this->strquery = $query;
