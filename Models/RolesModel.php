@@ -14,15 +14,17 @@
 
 		public function selectRoles()
 		{
-			//EXTRAE ROLES
-			$sql = "SELECT * FROM rol WHERE status != 0";
+			$whereAdmin = "";
+			if($_SESSION['idUser'] != 1 ){
+				$whereAdmin = " and idrol != 1 ";
+			}
+			$sql = "SELECT * FROM rol WHERE status != 0".$whereAdmin;
 			$request = $this->select_all($sql);
 			return $request;
 		}
 
 		public function selectRol(int $idrol)
 		{
-			//BUSCAR ROLE
 			$this->intIdrol = $idrol;
 			$sql = "SELECT * FROM rol WHERE idrol = $this->intIdrol";
 			$request = $this->select($sql);
@@ -42,9 +44,9 @@
 			if(empty($request))
 			{
 				$query_insert  = "INSERT INTO rol(nombrerol,descripcion,status) VALUES(?,?,?)";
-	        	$arrData = array($this->strRol, $this->strDescripcion, $this->intStatus);
-	        	$request_insert = $this->insert($query_insert,$arrData);
-	        	$return = $request_insert;
+				$arrData = array($this->strRol, $this->strDescripcion, $this->intStatus);
+				$request_insert = $this->insert($query_insert,$arrData);
+				$return = $request_insert;
 			}else{
 				$return = "exist";
 			}
@@ -68,7 +70,7 @@
 			}else{
 				$request = "exist";
 			}
-		    return $request;			
+				return $request;			
 		}
 
 		public function deleteRol(int $idrol)
@@ -93,4 +95,4 @@
 			return $request;
 		}
 	}
- ?>
+?>
