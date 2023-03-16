@@ -62,45 +62,45 @@
                     </div>
 
                     <div class="row">
-                       <div class="form-group col-md-6">
-                           <button id="btnActionForm" class="btn btn-primary btn-lg btn-block" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i><span id="btnText">Guardar</span></button>
-                       </div> 
-                       <div class="form-group col-md-6">
-                           <button class="btn btn-danger btn-lg btn-block" type="button" data-dismiss="modal"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cerrar</button>
-                       </div> 
+                      <div class="form-group col-md-6">
+                          <button id="btnActionForm" class="btn btn-primary btn-lg btn-block" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i><span id="btnText">Guardar</span></button>
+                      </div> 
+                      <div class="form-group col-md-6">
+                          <button class="btn btn-danger btn-lg btn-block" type="button" data-dismiss="modal"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cerrar</button>
+                      </div> 
                     </div>  
                 </div>
               </div>
               
               <div class="tile-footer">
-                 <div class="form-group col-md-12">
-                     <div id="containerGallery">
-                         <span>Agregar foto (440 x 545)</span>
-                         <button class="btnAddImage btn btn-info btn-sm" type="button">
-                             <i class="fas fa-plus"></i>
-                         </button>
-                     </div>
-                     <hr>
-                     <div id="containerImages">
-                         <div id="div24">
-                             <div class="prevImage">
-                                 <img src="<?= media(); ?>/images/uploads/producto1.jpg">
-                             </div>
-                             <input type="file" name="foto" id="img1" class="inputUploadfile">
-                             <label for="img1" class="btnUploadfile"><i class="fas fa-upload "></i></label>
-                             <button class="btnDeleteImage" type="button" onclick="fntDelItem('div24')"><i class="fas fa-trash-alt"></i></button>
-                         </div>
-                         <div id="div24">
-                             <div class="prevImage">
-                                 <img class="loading" src="<?= media(); ?>/images/loading.svg">
-                             </div>
-                             <input type="file" name="foto" id="img1" class="inputUploadfile">
-                             <label for="img1" class="btnUploadfile"><i class="fas fa-upload "></i></label>
-                             <button class="btnDeleteImage" type="button" onclick="fntDelItem('div24')"><i class="fas fa-trash-alt"></i></button>
-                         </div>
+                <div class="form-group col-md-12">
+                    <div id="containerGallery">
+                        <span>Agregar foto (440 x 545)</span>
+                        <button class="btnAddImage btn btn-info btn-sm" type="button">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <hr>
+                    <div id="containerImages">
+                        <div id="div24">
+                            <div class="prevImage">
+                                <img src="<?= media(); ?>/images/uploads/producto1.jpg">
+                            </div>
+                            <input type="file" name="foto" id="img1" class="inputUploadfile">
+                            <label for="img1" class="btnUploadfile"><i class="fas fa-upload "></i></label>
+                            <button class="btnDeleteImage" type="button" onclick="fntDelItem('div24')"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                        <div id="div24">
+                            <div class="prevImage">
+                                <img class="loading" src="<?= media(); ?>/images/loading.svg">
+                            </div>
+                            <input type="file" name="foto" id="img1" class="inputUploadfile">
+                            <label for="img1" class="btnUploadfile"><i class="fas fa-upload "></i></label>
+                            <button class="btnDeleteImage" type="button" onclick="fntDelItem('div24')"><i class="fas fa-trash-alt"></i></button>
+                        </div>
                         
-                     </div>
-                 </div>
+                    </div>
+                </div>
                                 
               </div>
             </form>
