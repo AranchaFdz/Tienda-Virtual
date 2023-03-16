@@ -1,5 +1,5 @@
 let tableUsuarios;
-let rowTable = "";
+let rowTable = ""; 
 let divLoading = document.querySelector("#divLoading");
 document.addEventListener('DOMContentLoaded', function(){
 
@@ -33,17 +33,17 @@ document.addEventListener('DOMContentLoaded', function(){
             },{
                 "extend": "excelHtml5",
                 "text": "<i class='fas fa-file-excel'></i> Excel",
-                "titleAttr":"Exportar a Excel",
+                "titleAttr":"Esportar a Excel",
                 "className": "btn btn-success"
             },{
                 "extend": "pdfHtml5",
                 "text": "<i class='fas fa-file-pdf'></i> PDF",
-                "titleAttr":"Exportar a PDF",
+                "titleAttr":"Esportar a PDF",
                 "className": "btn btn-danger"
             },{
                 "extend": "csvHtml5",
                 "text": "<i class='fas fa-file-csv'></i> CSV",
-                "titleAttr":"Exportar a CSV",
+                "titleAttr":"Esportar a CSV",
                 "className": "btn btn-info"
             }
         ],
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function(){
                             rowTable.cells[4].textContent = intTelefono;
                             rowTable.cells[5].textContent = document.querySelector("#listRolid").selectedOptions[0].text;
                             rowTable.cells[6].innerHTML = htmlStatus;
-                            rowTable="";
+                            rowTable = ""; 
                         }
                         $('#modalFormUsuario').modal("hide");
                         formUsuario.reset();
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
     }
-
+    //Actualizar Perfil
     if(document.querySelector("#formPerfil")){
         let formPerfil = document.querySelector("#formPerfil");
         formPerfil.onsubmit = function(e) {
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
     }
-
+    //Actualizar Datos Fiscales
     if(document.querySelector("#formDataFiscal")){
         let formDataFiscal = document.querySelector("#formDataFiscal");
         formDataFiscal.onsubmit = function(e) {
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function(){
             let strNit = document.querySelector('#txtNit').value;
             let strNombreFiscal = document.querySelector('#txtNombreFiscal').value;
             let strDirFiscal = document.querySelector('#txtDirFiscal').value;
-
+           
             if(strNit == '' || strNombreFiscal == '' || strDirFiscal == '' )
             {
                 swal("Atención", "Todos los campos son obligatorios." , "error");
@@ -256,7 +256,6 @@ function fntRolesUsuario(){
 }
 
 function fntViewUsuario(idpersona){
-    let idpersona = idpersona;
     let request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
     let ajaxUrl = base_url+'/Usuarios/getUsuario/'+idpersona;
     request.open("GET",ajaxUrl,true);
@@ -267,7 +266,7 @@ function fntViewUsuario(idpersona){
 
             if(objData.status)
             {
-                let estadoUsuario = objData.data.status == 1 ? 
+               let estadoUsuario = objData.data.status == 1 ? 
                 '<span class="badge badge-success">Activo</span>' : 
                 '<span class="badge badge-danger">Inactivo</span>';
 
@@ -293,8 +292,6 @@ function fntEditUsuario(element,idpersona){
     document.querySelector('.modal-header').classList.replace("headerRegister", "headerUpdate");
     document.querySelector('#btnActionForm').classList.replace("btn-primary", "btn-info");
     document.querySelector('#btnText').innerHTML ="Actualizar";
-
-    let idpersona =idpersona;
     let request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
     let ajaxUrl = base_url+'/Usuarios/getUsuario/'+idpersona;
     request.open("GET",ajaxUrl,true);
@@ -329,8 +326,6 @@ function fntEditUsuario(element,idpersona){
 }
 
 function fntDelUsuario(idpersona){
-
-    let idUsuario = idpersona;
     swal({
         title: "Eliminar Usuario",
         text: "¿Realmente quiere eliminar el Usuario?",
@@ -346,7 +341,7 @@ function fntDelUsuario(idpersona){
         {
             let request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
             let ajaxUrl = base_url+'/Usuarios/delUsuario';
-            let strData = "idUsuario="+idUsuario;
+            let strData = "idUsuario="+idpersona;
             request.open("POST",ajaxUrl,true);
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             request.send(strData);
@@ -371,6 +366,7 @@ function fntDelUsuario(idpersona){
 
 function openModal()
 {
+    rowTable = "";
     document.querySelector('#idUsuario').value ="";
     document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
     document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
