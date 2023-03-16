@@ -19,4 +19,6 @@
 	const NOMBRE_EMPESA = "Tienda Virtual ZUZU";
 	const WEB_EMPRESA = "Página Web empresa";
 
+	const CAT_SLider = "1,2";
+
 ?>
