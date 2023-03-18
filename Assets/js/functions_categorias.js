@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let formCategoria = document.querySelector("#formCategoria");
     formCategoria.onsubmit = function(e) {
         e.preventDefault();
+        let intIdCategoria = document.querySelector('#idCategoria').value;
         let strNombre = document.querySelector('#txtNombre').value;
         let strDescripcion = document.querySelector('#txtDescripcion').value;
         let intStatus = document.querySelector('#listStatus').value;        
@@ -114,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function(){
         request.open("POST",ajaxUrl,true);
         request.send(formData);
         request.onreadystatechange = function(){
-           if(request.readyState == 4 && request.status == 200){
+            if(request.readyState == 4 && request.status == 200){
                 
                 let objData = JSON.parse(request.responseText);
                 if(objData.status)

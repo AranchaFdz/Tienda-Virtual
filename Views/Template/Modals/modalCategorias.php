@@ -1,4 +1,3 @@
-<!-- Modal -->
 <div class="modal fade" id="modalFormCategorias" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" >
     <div class="modal-content">
@@ -49,7 +48,6 @@
                     </div>
                 </div>
               </div>
-              
               <div class="tile-footer">
                 <button id="btnActionForm" class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i><span id="btnText">Guardar</span></button>&nbsp;&nbsp;&nbsp;
                 <button class="btn btn-danger" type="button" data-dismiss="modal"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cerrar</button>
@@ -59,8 +57,6 @@
     </div>
   </div>
 </div>
-
-<!-- Modal -->
 <div class="modal fade" id="modalViewCategoria" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog" >
     <div class="modal-content">

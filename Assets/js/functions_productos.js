@@ -1,3 +1,4 @@
+
 document.write(`<script src="${base_url}/Assets/js/plugins/JsBarcode.all.min.js"></script>`);
 let tableProductos;
 let rowTable = "";
@@ -138,7 +139,7 @@ window.addEventListener('load', function() {
         let newElement = document.createElement("div");
         newElement.id= "div"+key;
         newElement.innerHTML = `
-            <div class="prevImage"></div>
+            <div class="prevImage"><div>
             <input type="file" name="foto" id="img${key}" class="inputUploadfile">
             <label for="img${key}" class="btnUploadfile"><i class="fas fa-upload "></i></label>
             <button class="btnDeleteImage notblock" type="button" onclick="fntDelItem('#div${key}')"><i class="fas fa-trash-alt"></i></button>`;

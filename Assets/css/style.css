@@ -1,7 +1,7 @@
 .app-sidebar__user-avatar {
   width: 48px;
   background: gray;
-  padding: 6px;
+  padding: 2px;
 }
 .app-sidebar__toggle{
 display: -webkit-flex;

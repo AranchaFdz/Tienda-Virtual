@@ -1,7 +1,7 @@
 <?php 
 	const BASE_URL = "http://localhost/tienda-virtual";
 
-	date_default_timezone_set('Europa/Spain');
+	date_default_timezone_set('Europe/Madrid');
 
 	const DB_HOST = "localhost";
 	const DB_NAME = "db_tiendavirtual";
@@ -18,5 +18,8 @@
 	const EMAIL_REMITENTE = "no-reply@empresa.com";
 	const NOMBRE_EMPESA = "Tienda Virtual ZUZU";
 	const WEB_EMPRESA = "Página Web empresa";
+
+	const CAT_SLIDER = "1,2";
+	const CAT_BANNER = "1,2";
 
 ?>

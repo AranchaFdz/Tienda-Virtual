@@ -36,9 +36,9 @@
 					$strDescipcion = strClean($_POST['txtDescripcion']);
 					$intStatus = intval($_POST['listStatus']);
 
-					$foto   	 	= $_FILES['foto'];
+					$foto   	  	= $_FILES['foto'];
 					$nombre_foto 	= $foto['name'];
-					$type 		 	= $foto['type'];
+					$type 		  	= $foto['type'];
 					$url_temp    	= $foto['tmp_name'];
 					$imgPortada 	= 'portada_categoria.png';
 					$request_cateria = "";
