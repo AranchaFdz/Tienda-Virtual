@@ -1,6 +1,6 @@
 <script>
-        const base_url = "<?= base_url(); ?>";
-    </script>
+const base_url = "<?= base_url(); ?>";
+</script>
 
     <script src="<?= media(); ?>/js/jquery-3.3.1.min.js"></script>
     <script src="<?= media(); ?>/js/popper.min.js"></script>
@@ -20,6 +20,7 @@
     <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
 
     <script type="text/javascript" src="<?= media();?>/js/functions_admin.js"></script>
+    <script type="text/javascript" src="<?= media();?>/js/functions_roles.js"></script>
     <script src="<?= media(); ?>/js/<?= $data['page_functions_js']; ?>"></script>
   </body>
 </html>

@@ -17,30 +17,29 @@
           <li class="breadcrumb-item"><a href="<?= base_url(); ?>/roles"><?= $data['page_title'] ?></a></li>
         </ul>
       </div>
-
-        <div class="row">
-            <div class="col-md-12">
-              <div class="tile">
-                <div class="tile-body">
-                  <div class="table-responsive">
-                    <table class="table table-hover table-bordered" id="tableRoles">
-                      <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>Nombre</th>
-                          <th>Descripción</th>
-                          <th>Status</th>
-                          <th>Acciones</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                      </tbody>
-                    </table>
-                  </div>
+      <div class="row">
+          <div class="col-md-12">
+            <div class="tile">
+              <div class="tile-body">
+                <div class="table-responsive">
+                  <table class="table table-hover table-bordered" id="tableRoles">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Status</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
-        </div>
+          </div>
+      </div>
     </main>
 <?php footerAdmin($data); ?>
     

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function(){
         request.open("POST",ajaxUrl,true);
         request.send(formData);
         request.onreadystatechange = function(){
-           if(request.readyState == 4 && request.status == 200){
+            if(request.readyState == 4 && request.status == 200){
                 
                 var objData = JSON.parse(request.responseText);
                 if(objData.status)
@@ -82,9 +82,6 @@ function openModal(){
 }
 
 window.addEventListener('load', function() {
-    /*fntEditRol();
-    fntDelRol();
-    fntPermisos();*/
 }, false);
 
 function fntEditRol(idrol){
@@ -116,8 +113,8 @@ function fntEditRol(idrol){
                     var optionSelect = '<option value="2" selected class="notBlock">Inactivo</option>';
                 }
                 var htmlSelect = `${optionSelect}
-                                  <option value="1">Activo</option>
-                                  <option value="2">Inactivo</option>
+                                <option value="1">Activo</option>
+                                <option value="2">Inactivo</option>
                                 `;
                 document.querySelector("#listStatus").innerHTML = htmlSelect;
                 $('#modalFormRol').modal('show');
@@ -157,9 +154,6 @@ function fntDelRol(idrol){
                     {
                         swal("Eliminar!", objData.msg , "success");
                         tableRoles.api().ajax.reload(function(){
-                            fntEditRol();
-                            fntDelRol();
-                            fntPermisos();
                         });
                     }else{
                         swal("Atención!", objData.msg , "error");
