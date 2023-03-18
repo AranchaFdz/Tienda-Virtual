@@ -40,17 +40,17 @@
 			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
-						Bienvenido Arancha
+						Welcome Arancha
 					</div>
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							Help & FAQs
 						</a>
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Mi cuenta
+							My Account
 						</a>
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Salir
+							Logout
 						</a>
 					</div>
 				</div>
@@ -63,16 +63,16 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a href="<?= base_url(); ?>">Inicio</a>
+								<a href="<?= base_url(); ?>">Home</a>
 							</li>
 							<li>
-								<a href="<?= base_url(); ?>/tienda">Tienda</a>
+								<a href="<?= base_url(); ?>/tienda">Store</a>
 							</li>
 							<li>
-								<a href="<?= base_url(); ?>/nosotros">Nosotros</a>
+								<a href="<?= base_url(); ?>/nosotros">About Us</a>
 							</li>
 							<li>
-								<a href="<?= base_url(); ?>/contacto">contacto</a>
+								<a href="<?= base_url(); ?>/contacto">contact</a>
 							</li>
 						</ul>
 					</div>	
@@ -109,7 +109,7 @@
 			<ul class="topbar-mobile">
 				<li>
 					<div class="left-top-bar">
-						Bienvenido Arancha
+						Welcome Arancha
 					</div>
 				</li>
 				<li>
@@ -118,26 +118,26 @@
 							Help & FAQs
 						</a>
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Mi cuenta
+							My Account
 						</a>
 						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Salir
+							Logout
 						</a>
 					</div>
 				</li>
 			</ul>
 			<ul class="main-menu-m">
 				<li>
-					<a href="<?= base_url(); ?>">Inicio</a>
+					<a href="<?= base_url(); ?>">Home</a>
 				</li>
 				<li>
-					<a href="<?= base_url(); ?>/tienda">Tienda</a>
+					<a href="<?= base_url(); ?>/tienda">Store</a>
 				</li>
 				<li>
-					<a href="<?= base_url(); ?>/nosotros">Nosotros</a>
+					<a href="<?= base_url(); ?>/nosotros">About Us</a>
 				</li>
 				<li>
-					<a href="<?= base_url(); ?>/contacto">Contacto</a>
+					<a href="<?= base_url(); ?>/contacto">Contact</a>
 				</li>
 			</ul>
 		</div>

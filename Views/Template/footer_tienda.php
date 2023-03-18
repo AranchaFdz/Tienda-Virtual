@@ -3,7 +3,7 @@
 			<div class="row">
 				<div class="col-sm-6 col-lg-4 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						Categorias
+						Categories
 					</h4>
 
 					<ul>
@@ -34,11 +34,12 @@
 				</div>
 				<div class="col-sm-6 col-lg-4 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						Contacto
+						Contact
 					</h4>
 
 					<p class="stext-107 cl7 size-201">
 						Avda. La costa, 58 <br>
+						Gijón Asturias, España <br>
 						Tel:- (+34) 605 514 221
 					</p>
 
@@ -54,7 +55,7 @@
 				</div>
 				<div class="col-sm-6 col-lg-4 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
-						Suscríbete
+						Subscribe
 					</h4>
 
 					<form>
@@ -65,7 +66,7 @@
 
 						<div class="p-t-18">
 							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-								Suscribirme
+							Subscribe
 							</button>
 						</div>
 					</form>
