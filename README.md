@@ -26,6 +26,7 @@ Zuzu es un ecommerce enfocado a la venta de productos, con una estructura diseñ
 - Trello
 - HTML
 - CSS
+- SASS
 - Javascript
 - PHP
 - Git - GitHub
