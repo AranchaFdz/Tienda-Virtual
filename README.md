@@ -38,6 +38,10 @@ Zuzu es un ecommerce enfocado a la venta de productos, con una estructura diseñ
 - Railway
 
 
+### Instalación
+1. Clonar [repositorio](https://github.com/AranchaFdz/tienda-virtual) 
+
+
 ### Vistas
 
 
