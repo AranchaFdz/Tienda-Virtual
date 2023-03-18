@@ -5,10 +5,10 @@
 		{
 			parent::__construct();
 			session_start();
-			session_regenerate_id(true);
 			if(empty($_SESSION['login']))
 			{
 				header('Location: '.base_url().'/login');
+				die();
 			}
 			getPermisos(2);
 		}
@@ -19,7 +19,7 @@
 				header("Location:".base_url().'/dashboard');
 			}
 			$data['page_tag'] = "Usuarios";
-			$data['page_title'] = "USUARIOS";
+			$data['page_title'] = "USUARIOS <small>Tienda Virtual</small>";
 			$data['page_name'] = "usuarios";
 			$data['page_functions_js'] = "functions_usuarios.js";
 			$this->views->getView($this,"usuarios",$data);
@@ -121,7 +121,7 @@
 						if(($_SESSION['idUser'] == 1 and $_SESSION['userData']['idrol'] == 1) ||
 							($_SESSION['userData']['idrol'] == 1 and $arrData[$i]['idrol'] != 1) and
 							($_SESSION['userData']['idpersona'] != $arrData[$i]['idpersona'] )
-							){
+							 ){
 							$btnDelete = '<button class="btn btn-danger btn-sm btnDelUsuario" onClick="fntDelUsuario('.$arrData[$i]['idpersona'].')" title="Eliminar usuario"><i class="far fa-trash-alt"></i></button>';
 						}else{
 							$btnDelete = '<button class="btn btn-secondary btn-sm" disabled ><i class="far fa-trash-alt"></i></button>';
@@ -240,4 +240,4 @@
 		}
 
 	}
-?>
+ ?>
