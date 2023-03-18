@@ -100,7 +100,7 @@ Zuzu es un ecommerce enfocado a la venta de productos, con una estructura diseñ
 
 ### Diagrama de Flujo
 
-<p align="center"><img width="400" alt="nombre" src="../../../../../Users/aranchafernandez/Desktop/Captura%20de%20pantalla%202023-03-18%20a%20las%2017.34.01.png")
+<p align="center"><img width="400" alt="nombre" src="file:///Users/aranchafernandez/Desktop/Personal/Diagrama%20Administrativo.png")
 "></p>
 
 - [Diagrama de Flujo Administrativo] (https://app.diagrams.net/?src=about)
