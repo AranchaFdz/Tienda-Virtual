@@ -57,6 +57,6 @@ Zuzu es un ecommerce enfocado a la venta de productos, con una estructura diseñ
 
 
 ### Autora
-- [Arancha Fernández]
+- [Arancha Fernández] (https://github.com/AranchaFdz)
 
  
