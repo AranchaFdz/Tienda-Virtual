@@ -84,34 +84,6 @@ Zuzu es un ecommerce enfocado a la venta de productos, con una estructura diseñ
 <p align="center"><img width="400" alt="nombre" src="https://user-images.githubusercontent.com/110049521/226105394-82b5c474-efe9-4c22-b8e9-6682ef8c8f20.png")
 "></p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Diagrama de Flujo
-
-<p align="center"><img width="400" alt="nombre" src="file:///Users/aranchafernandez/Desktop/Personal/Diagrama%20Administrativo.png"
-"></p>
-
-- [Diagrama de Flujo Administrativo] 
-
-
-
-
-
-
-
-
 ### Autora
 - [Arancha Fernández] (https://github.com/AranchaFdz)
 
