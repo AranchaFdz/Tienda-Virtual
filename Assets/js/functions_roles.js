@@ -2,22 +2,46 @@ var tableRoles;
 var divLoading = document.querySelector("#divLoading");
 document.addEventListener('DOMContentLoaded', function(){
 
-	tableRoles = $('#tableRoles').dataTable( {
-		"aProcessing":true,
-		"aServerSide":true,
+    tableRoles = $('#tableRoles').dataTable( {
+        "aProcessing":true,
+        "aServerSide":true,
         "language": {
-        	"url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
+            "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"
         },
         "ajax":{
             "url": " "+base_url+"/Roles/getRoles",
             "dataSrc":""
         },
         "columns":[
-            {"data":"idrol"},
-            {"data":"nombrerol"},
+            {"data":"idcategoria"},
+            {"data":"nombre"},
             {"data":"descripcion"},
             {"data":"status"},
             {"data":"options"}
+        ],
+        'dom': 'lBfrtip',
+        'buttons': [
+            {
+                "extend": "copyHtml5",
+                "text": "<i class='far fa-copy'></i> Copiar",
+                "titleAttr":"Copiar",
+                "className": "btn btn-secondary"
+            },{
+                "extend": "excelHtml5",
+                "text": "<i class='fas fa-file-excel'></i> Excel",
+                "titleAttr":"Exportar a Excel",
+                "className": "btn btn-success"
+            },{
+                "extend": "pdfHtml5",
+                "text": "<i class='fas fa-file-pdf'></i> PDF",
+                "titleAttr":"Exportar a PDF",
+                "className": "btn btn-danger"
+            },{
+                "extend": "csvHtml5",
+                "text": "<i class='fas fa-file-csv'></i> CSV",
+                "titleAttr":"Exportar a CSV",
+                "className": "btn btn-info"
+            }
         ],
         "resonsieve":"true",
         "bDestroy": true,
@@ -25,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function(){
         "order":[[0,"desc"]]  
     });
 
-    //NUEVO ROL
     var formRol = document.querySelector("#formRol");
     formRol.onsubmit = function(e) {
         e.preventDefault();
@@ -46,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function(){
         request.open("POST",ajaxUrl,true);
         request.send(formData);
         request.onreadystatechange = function(){
-           if(request.readyState == 4 && request.status == 200){
+        if(request.readyState == 4 && request.status == 200){
                 
                 var objData = JSON.parse(request.responseText);
                 if(objData.status)
@@ -62,10 +85,8 @@ document.addEventListener('DOMContentLoaded', function(){
             divLoading.style.display = "none";
             return false;
         }
-
         
     }
-
 });
 
 $('#tableRoles').DataTable();
@@ -82,9 +103,6 @@ function openModal(){
 }
 
 window.addEventListener('load', function() {
-    /*fntEditRol();
-    fntDelRol();
-    fntPermisos();*/
 }, false);
 
 function fntEditRol(idrol){
@@ -116,8 +134,8 @@ function fntEditRol(idrol){
                     var optionSelect = '<option value="2" selected class="notBlock">Inactivo</option>';
                 }
                 var htmlSelect = `${optionSelect}
-                                  <option value="1">Activo</option>
-                                  <option value="2">Inactivo</option>
+                                <option value="1">Activo</option>
+                                <option value="2">Inactivo</option>
                                 `;
                 document.querySelector("#listStatus").innerHTML = htmlSelect;
                 $('#modalFormRol').modal('show');
@@ -126,7 +144,6 @@ function fntEditRol(idrol){
             }
         }
     }
-
 }
 
 function fntDelRol(idrol){
@@ -167,7 +184,6 @@ function fntDelRol(idrol){
                 }
             }
         }
-
     });
 }
 
@@ -177,7 +193,6 @@ function fntPermisos(idrol){
     var ajaxUrl = base_url+'/Permisos/getPermisosRol/'+idrol;
     request.open("GET",ajaxUrl,true);
     request.send();
-
     request.onreadystatechange = function(){
         if(request.readyState == 4 && request.status == 200){
             document.querySelector('#contentAjax').innerHTML = request.responseText;
@@ -195,7 +210,6 @@ function fntSavePermisos(evnet){
     var formData = new FormData(formElement);
     request.open("POST",ajaxUrl,true);
     request.send(formData);
-
     request.onreadystatechange = function(){
         if(request.readyState == 4 && request.status == 200){
             var objData = JSON.parse(request.responseText);

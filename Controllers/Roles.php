@@ -3,9 +3,8 @@
 	class Roles extends Controllers{
 		public function __construct()
 		{
-			parent::__construct();
 			session_start();
-			session_regenerate_id(true);
+			parent::__construct();
 			if(empty($_SESSION['login']))
 			{
 				header('Location: '.base_url().'/login');
@@ -22,9 +21,6 @@
 			$data['page_tag'] = "Roles Usuario";
 			$data['page_name'] = "rol_usuario";
 			$data['page_title'] = "Roles";
-
-	
-
 			$data['page_functions_js'] = "functions_roles.js";
 			$this->views->getView($this,"roles",$data);
 		}

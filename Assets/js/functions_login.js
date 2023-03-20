@@ -17,13 +17,14 @@ document.addEventListener('DOMContentLoaded', function(){
 			{
 				swal("Por favor", "Escribe usuario y contraseña.", "error");
 				return false;
-			}else{
-				divLoading.style.display = "flex";
+			}else{ 
 				var request = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 				var ajaxUrl = base_url+'/Login/loginUser'; 
 				var formData = new FormData(formLogin);
 				request.open("POST",ajaxUrl,true);
 				request.send(formData);
+
+				console.log(request);
 				request.onreadystatechange = function(){
 					if(request.readyState != 4) return;
 					if(request.status == 200){

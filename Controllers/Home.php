@@ -1,17 +1,17 @@
 <?php 
 
-	class Home extends Controllers{
+	class Tienda extends Controllers{
 		public function __construct()
 		{
 			parent::__construct();
 		}
 
-		public function home()
+		public function tienda()
 		{
-			$data['page_tag'] = "ZUZU";
-			$data['page_title'] = "Página principal";
-			$data['page_name'] = "tienda-virtual";
-			$this->views->getView($this,"home",$data);
+			$data['page_tag'] = "Tienda";
+			$data['page_title'] = "Tienda";
+			$data['page_name'] = "tienda";
+			$this->views->getView($this,"tienda",$data);
 		}
 
 	}

@@ -1,4 +1,3 @@
-<!-- Modal -->
 <div class="modal fade" id="modalFormProductos" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-xl" >
     <div class="modal-content">
@@ -22,7 +21,6 @@
                       <label class="control-label">Descripción Producto</label>
                       <textarea class="form-control" id="txtDescripcion" name="txtDescripcion" ></textarea>
                     </div>
-                    
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
@@ -46,7 +44,6 @@
                             <input class="form-control" id="txtStock" name="txtStock" type="text" required="">
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="listCategoria">Categoría <span class="required">*</span></label>
@@ -60,7 +57,6 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="row">
                       <div class="form-group col-md-6">
                           <button id="btnActionForm" class="btn btn-primary btn-lg btn-block" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i><span id="btnText">Guardar</span></button>
@@ -71,11 +67,10 @@
                     </div>  
                 </div>
               </div>
-              
               <div class="tile-footer">
                 <div class="form-group col-md-12">
                     <div id="containerGallery">
-                        <span>Agregar foto (440 x 545)</span>
+                        <span>Galería de fotos</span>
                         <button class="btnAddImage btn btn-info btn-sm" type="button">
                             <i class="fas fa-plus"></i>
                         </button>
@@ -98,10 +93,8 @@
                             <label for="img1" class="btnUploadfile"><i class="fas fa-upload "></i></label>
                             <button class="btnDeleteImage" type="button" onclick="fntDelItem('div24')"><i class="fas fa-trash-alt"></i></button>
                         </div>
-                        
                     </div>
                 </div>
-                                
               </div>
             </form>
       </div>

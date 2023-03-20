@@ -33,17 +33,17 @@ document.addEventListener('DOMContentLoaded', function(){
             },{
                 "extend": "excelHtml5",
                 "text": "<i class='fas fa-file-excel'></i> Excel",
-                "titleAttr":"Esportar a Excel",
+                "titleAttr":"Exportar a Excel",
                 "className": "btn btn-success"
             },{
                 "extend": "pdfHtml5",
                 "text": "<i class='fas fa-file-pdf'></i> PDF",
-                "titleAttr":"Esportar a PDF",
+                "titleAttr":"Exportar a PDF",
                 "className": "btn btn-danger"
             },{
                 "extend": "csvHtml5",
                 "text": "<i class='fas fa-file-csv'></i> CSV",
-                "titleAttr":"Esportar a CSV",
+                "titleAttr":"Exportar a CSV",
                 "className": "btn btn-info"
             }
         ],
@@ -116,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
     }
-    //Actualizar Perfil
     if(document.querySelector("#formPerfil")){
         let formPerfil = document.querySelector("#formPerfil");
         formPerfil.onsubmit = function(e) {
@@ -186,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
     }
-    //Actualizar Datos Fiscales
+
     if(document.querySelector("#formDataFiscal")){
         let formDataFiscal = document.querySelector("#formDataFiscal");
         formDataFiscal.onsubmit = function(e) {
@@ -194,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function(){
             let strNit = document.querySelector('#txtNit').value;
             let strNombreFiscal = document.querySelector('#txtNombreFiscal').value;
             let strDirFiscal = document.querySelector('#txtDirFiscal').value;
-           
+
             if(strNit == '' || strNombreFiscal == '' || strDirFiscal == '' )
             {
                 swal("Atención", "Todos los campos son obligatorios." , "error");
@@ -266,7 +265,7 @@ function fntViewUsuario(idpersona){
 
             if(objData.status)
             {
-               let estadoUsuario = objData.data.status == 1 ? 
+                let estadoUsuario = objData.data.status == 1 ? 
                 '<span class="badge badge-success">Activo</span>' : 
                 '<span class="badge badge-danger">Inactivo</span>';
 
@@ -358,7 +357,6 @@ function fntDelUsuario(idpersona){
                 }
             }
         }
-
     });
 
 }
