@@ -166,7 +166,6 @@
 				if(empty($_POST['idproducto']) || empty($_POST['file'])){
 					$arrResponse = array("status" => false, "msg" => 'Datos incorrectos.');
 				}else{
-					//Eliminar de la DB
 					$idProducto = intval($_POST['idproducto']);
 					$imgNombre  = strClean($_POST['file']);
 					$request_image = $this->model->deleteImage($idProducto,$imgNombre);
@@ -200,5 +199,4 @@
 			die();
 		}
 	}
-
  ?>
